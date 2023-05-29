@@ -1,0 +1,8 @@
+filebeat.inputs:
+  - type: filestream
+    include_lines: ["Data Stream :"]
+    paths:
+      - <APIM_Home>/repository/logs/ob_logs.log
+filebeat.registry.path: ./registry
+output.logstash:
+  hosts: ["localhost:5044"]

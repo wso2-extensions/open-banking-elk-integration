@@ -1,0 +1,8 @@
+filebeat.inputs:
+  - type: filestream
+    include_lines: ["Data Stream :"]
+    paths:
+      - <IS_Home>/wso2is-6.0.0/repository/logs/ob_logs.log
+filebeat.registry.path: ./registry
+output.logstash:
+  hosts: ["localhost:5044"]
